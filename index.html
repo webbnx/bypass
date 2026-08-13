@@ -69,6 +69,14 @@
             z-index: 1;
         }
         
+        .landing {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        
         .title {
             font-size: 5rem;
             font-weight: 900;
@@ -131,6 +139,11 @@
             width: 100%;
             max-width: 1200px;
             animation: fadeIn 1s ease;
+            padding: 40px 20px;
+        }
+        
+        .content.active {
+            display: block;
         }
         
         @keyframes fadeIn {
@@ -143,6 +156,7 @@
             justify-content: center;
             margin-bottom: 2rem;
             flex-wrap: wrap;
+            gap: 10px;
         }
         
         .nav-btn {
@@ -150,7 +164,6 @@
             border: 2px solid #fff;
             color: #fff;
             padding: 10px 25px;
-            margin: 0 10px;
             font-size: 1.1rem;
             font-weight: 700;
             cursor: pointer;
@@ -158,6 +171,7 @@
             transition: all 0.3s ease;
             text-transform: uppercase;
             letter-spacing: 0.05em;
+            font-family: 'Orbitron', monospace;
         }
         
         .nav-btn:hover, .nav-btn.active {
@@ -173,6 +187,7 @@
             border-radius: 15px;
             box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
             margin-bottom: 2rem;
+            border: 2px solid rgba(255, 255, 255, 0.2);
         }
         
         .section.active {
@@ -185,6 +200,7 @@
             to { opacity: 1; }
         }
         
+        /* Games Section */
         .games-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -198,3 +214,356 @@
             overflow: hidden;
             transition: all 0.3s ease;
             height: 250px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+            cursor: pointer;
+        }
+        
+        .game-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.4), 0 0 20px rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        .game-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+        
+        .game-card p {
+            margin-bottom: 15px;
+            color: #ccc;
+            font-size: 0.95rem;
+        }
+        
+        .play-btn {
+            background: linear-gradient(45deg, #fff, #888);
+            border: none;
+            color: #0a0a0a;
+            padding: 8px 20px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            font-family: 'Orbitron', monospace;
+        }
+        
+        .play-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+        }
+        
+        /* Resources Section */
+        .resources-container {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .resource-item {
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid #fff;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .resource-item:hover {
+            transform: translateX(10px);
+            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        .resource-item h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+        
+        .resource-item p {
+            color: #ccc;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+        
+        .resource-link {
+            display: inline-block;
+            background: linear-gradient(45deg, #fff, #888);
+            color: #0a0a0a;
+            padding: 8px 15px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+            border: none;
+            cursor: pointer;
+            font-family: 'Orbitron', monospace;
+        }
+        
+        .resource-link:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+        }
+        
+        /* About Section */
+        .about-content {
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid #fff;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            line-height: 1.8;
+        }
+        
+        .about-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px #fff, 0 0 20px #fff;
+        }
+        
+        .about-content p {
+            font-size: 1.1rem;
+            color: #ccc;
+            margin-bottom: 15px;
+        }
+        
+        /* Back Button */
+        .back-btn {
+            background: transparent;
+            border: 2px solid #fff;
+            color: #fff;
+            padding: 10px 25px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-family: 'Orbitron', monospace;
+            margin-top: 2rem;
+        }
+        
+        .back-btn:hover {
+            background: #fff;
+            color: #0a0a0a;
+            box-shadow: 0 0 10px #fff, 0 0 20px #fff;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .title {
+                font-size: 3rem;
+            }
+            
+            .games-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .nav-btn {
+                width: 100%;
+                max-width: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Background Particles -->
+    <div class="particles" id="particlesContainer"></div>
+    
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Landing Page -->
+        <div class="landing" id="landing">
+            <h1 class="title">GIL PROJECT</h1>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem; text-shadow: 0 0 10px #fff;">Recursos Educativos Interactivos</p>
+            <button class="enter-btn" onclick="enterSite()">Entrar</button>
+        </div>
+        
+        <!-- Main Content -->
+        <div class="content" id="content">
+            <!-- Navigation -->
+            <nav>
+                <button class="nav-btn active" onclick="showSection('games')">Juegos</button>
+                <button class="nav-btn" onclick="showSection('resources')">Recursos</button>
+                <button class="nav-btn" onclick="showSection('about')">Acerca de</button>
+            </nav>
+            
+            <!-- Games Section -->
+            <section id="games" class="section active">
+                <h2 style="text-align: center; margin-bottom: 2rem; font-size: 2.5rem;">Juegos Educativos</h2>
+                <div class="games-grid">
+                    <div class="game-card">
+                        <h3>🧮 Matemáticas</h3>
+                        <p>Aprende operaciones matemáticas de forma interactiva y divertida</p>
+                        <button class="play-btn" onclick="alert('Juego de Matemáticas - Próximamente')">Jugar</button>
+                    </div>
+                    
+                    <div class="game-card">
+                        <h3>📚 Vocabulario</h3>
+                        <p>Expande tu vocabulario con palabras y definiciones nuevas</p>
+                        <button class="play-btn" onclick="alert('Juego de Vocabulario - Próximamente')">Jugar</button>
+                    </div>
+                    
+                    <div class="game-card">
+                        <h3>🌍 Geografía</h3>
+                        <p>Explora el mundo y aprende sobre países y continentes</p>
+                        <button class="play-btn" onclick="alert('Juego de Geografía - Próximamente')">Jugar</button>
+                    </div>
+                    
+                    <div class="game-card">
+                        <h3>⚛️ Ciencias</h3>
+                        <p>Descubre los secretos del universo y la naturaleza</p>
+                        <button class="play-btn" onclick="alert('Juego de Ciencias - Próximamente')">Jugar</button>
+                    </div>
+                    
+                    <div class="game-card">
+                        <h3>🎨 Creatividad</h3>
+                        <p>Desarrolla tu creatividad con desafíos artísticos</p>
+                        <button class="play-btn" onclick="alert('Juego de Creatividad - Próximamente')">Jugar</button>
+                    </div>
+                    
+                    <div class="game-card">
+                        <h3>🏆 Desafíos</h3>
+                        <p>Compite en desafíos globales y gana premios</p>
+                        <button class="play-btn" onclick="alert('Desafíos - Próximamente')">Jugar</button>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Resources Section -->
+            <section id="resources" class="section">
+                <h2 style="text-align: center; margin-bottom: 2rem; font-size: 2.5rem;">Recursos Disponibles</h2>
+                <div class="resources-container">
+                    <div class="resource-item">
+                        <h3>📖 Tutoriales Interactivos</h3>
+                        <p>Accede a una biblioteca completa de tutoriales paso a paso que te guiarán a través de cada concepto importante.</p>
+                        <a class="resource-link" href="#" onclick="event.preventDefault(); alert('Tutoriales - Próximamente')">Ver Tutoriales</a>
+                    </div>
+                    
+                    <div class="resource-item">
+                        <h3>📝 Ejercicios Prácticos</h3>
+                        <p>Practica con cientos de ejercicios diseñados para reforzar tu aprendizaje. Cada ejercicio tiene retroalimentación inmediata.</p>
+                        <a class="resource-link" href="#" onclick="event.preventDefault(); alert('Ejercicios - Próximamente')">Practicar Ahora</a>
+                    </div>
+                    
+                    <div class="resource-item">
+                        <h3>🎥 Videos Educativos</h3>
+                        <p>Mira videos en alta definición que explican temas complejos de manera clara y entretenida.</p>
+                        <a class="resource-link" href="#" onclick="event.preventDefault(); alert('Videos - Próximamente')">Ver Videos</a>
+                    </div>
+                    
+                    <div class="resource-item">
+                        <h3>🧪 Simuladores</h3>
+                        <p>Experimenta con simuladores interactivos que traen los conceptos a la vida de una manera tangible.</p>
+                        <a class="resource-link" href="#" onclick="event.preventDefault(); alert('Simuladores - Próximamente')">Acceder</a>
+                    </div>
+                    
+                    <div class="resource-item">
+                        <h3>📊 Progreso y Estadísticas</h3>
+                        <p>Sigue tu progreso en tiempo real y visualiza tus avances en un dashboard personalizado.</p>
+                        <a class="resource-link" href="#" onclick="event.preventDefault(); alert('Estadísticas - Próximamente')">Ver Progreso</a>
+                    </div>
+                    
+                    <div class="resource-item">
+                        <h3>💬 Comunidad y Foros</h3>
+                        <p>Conecta con otros estudiantes y educadores, comparte dudas y colabora en proyectos conjuntos.</p>
+                        <a class="resource-link" href="#" onclick="event.preventDefault(); alert('Comunidad - Próximamente')">Únete Ahora</a>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- About Section -->
+            <section id="about" class="section">
+                <div class="about-content">
+                    <h2>Sobre Gil Project</h2>
+                    <p>
+                        GIL Project es una plataforma educativa revolucionaria diseñada para estudiantes de todas las edades.
+                    </p>
+                    <p>
+                        Nuestra misión es hacer que el aprendizaje sea accesible, interactivo y divertido para todos.
+                    </p>
+                    <p>
+                        Con una combinación de juegos, recursos multimedia y desafíos, creamos una experiencia educativa única.
+                    </p>
+                    <p>
+                        Únete a miles de estudiantes que ya están transformando su educación con Gil Project.
+                    </p>
+                </div>
+            </section>
+        </div>
+    </div>
+    
+    <!-- JavaScript -->
+    <script>
+        // Create floating particles
+        function createParticles() {
+            const particlesContainer = document.getElementById('particlesContainer');
+            const particleCount = 50;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                
+                const size = Math.random() * 3 + 1;
+                const left = Math.random() * 100;
+                const duration = Math.random() * 15 + 10;
+                const delay = Math.random() * 5;
+                
+                particle.style.width = size + 'px';
+                particle.style.height = size + 'px';
+                particle.style.left = left + '%';
+                particle.style.animationDuration = duration + 's';
+                particle.style.animationDelay = delay + 's';
+                
+                particlesContainer.appendChild(particle);
+            }
+        }
+        
+        // Enter site function
+        function enterSite() {
+            const landing = document.getElementById('landing');
+            const content = document.getElementById('content');
+            
+            landing.style.display = 'none';
+            content.classList.add('active');
+        }
+        
+        // Show section function
+        function showSection(sectionId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => section.classList.remove('active'));
+            
+            // Remove active class from all nav buttons
+            const navBtns = document.querySelectorAll('.nav-btn');
+            navBtns.forEach(btn => btn.classList.remove('active'));
+            
+            // Show selected section
+            const selectedSection = document.getElementById(sectionId);
+            if (selectedSection) {
+                selectedSection.classList.add('active');
+            }
+            
+            // Add active class to clicked button
+            event.target.classList.add('active');
+        }
+        
+        // Initialize particles on page load
+        window.addEventListener('load', createParticles);
+    </script>
+</body>
+</html>
